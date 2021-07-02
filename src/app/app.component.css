@@ -1,0 +1,110 @@
+@import url('http://fonts.cdnfonts.com/css/flow-ext');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Flow Ext', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    z-index: 5000;
+}
+
+.nav .logo{
+    margin: 0 7rem;
+}
+
+.nav .navbar{
+    margin: 0 7rem;
+}
+
+.nav .logo h5{
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 1000;
+    animation: logo-grande 5s ease-in-out infinite alternate-reverse both;
+}
+
+.nav .logo a{
+    text-decoration: none;
+    color: #000;
+}
+
+.nav .navbar ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav .navbar li{
+    list-style: none;
+    padding: 0 1rem;
+}
+
+.nav .navbar li a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 1000;
+    color: #000;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.hide-nav{
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-content: center;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 38px;
+    z-index: 20;
+    display: none;
+    background: rgb(199, 199, 199);
+}
+
+@keyframes logo-grande{
+    0%{
+        transform: scale(1.05);
+    }
+
+    100%{
+        transform: scale(0.95);
+    }
+}
+
+@media (max-width: 890px){
+    .nav .navbar{
+        margin: 0 1rem;
+    }
+    .nav .logo{
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 500px){
+    .navbar{
+        display: none;
+    }
+
+    .nav .logo{
+        margin: auto;
+    }
+
+    .hide-nav{
+        display: grid;
+    }
+}

@@ -1,0 +1,86 @@
+@import url('http://fonts.cdnfonts.com/css/flow-ext');
+
+*{
+    font-family: 'Flow Ext', sans-serif;
+}
+
+.wave{
+    background: url(/assets/img/wave.png) no-repeat center;
+    width: 100%;
+}
+
+.registro-form{
+    width: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+
+.registro-form h5{
+    text-transform: uppercase;
+    color: #333;
+    font-size: 1.9rem;
+}
+
+.avatar{
+    margin-top: 15vh;
+}
+
+.avatar img{
+    width: 100px;
+    animation: giro .5s ease-in-out;
+}
+
+.registro{
+    margin: 7px 0;
+    padding: 10px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.registro input{
+    margin-left: 10px;
+    border: 0;
+    outline: none;
+    background: none;
+}
+
+.btn{
+    width: 50%;
+    margin: 10px 0;
+    border: 1px solid #d9d9d9;
+    border-radius: 15px;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.btn:hover{
+    color: #d9d9d9;
+    background-position: right;
+}
+
+a{
+    text-decoration: none;
+    color: #d9d9d9;
+}
+
+a:hover{
+    color: #a5cfeb;
+}
+
+@keyframes giro{
+    0%{
+        transform: translate3d(-42px,62px,135px);
+    }
+
+    100%{
+        transform: translate3d(0px,0px,0px);
+    }
+}
+
+@media (max-width: 550px){
+    .registro-form{
+        width: 250px;
+    }
+}

@@ -1,0 +1,64 @@
+@import url('http://fonts.cdnfonts.com/css/flow-ext');
+
+*{
+    font-family: 'Flow Ext', sans-serif;
+}
+
+.wave{
+    background: url(/assets/img/wave.png) no-repeat center;
+    width: 100%;
+}
+
+.login-form{
+    width: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form h5{
+    text-transform: uppercase;
+    color: #333;
+    font-size: 1.9rem;
+}
+
+.avatar{
+    margin: 7px 0;
+}
+
+.avatar img{
+    width: 100px;
+    animation: giro .5s ease-in-out;
+}
+
+.login{
+    margin: 7px 0;
+    padding: 10px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.login input{
+    margin-left: 10px;
+    border: 0;
+    outline: none;
+    background: none;
+}
+
+@keyframes giro{
+    0%{
+        transform: translate3d(-42px,62px,135px);
+    }
+
+    100%{
+        transform: translate3d(0px,0px,0px);
+    }
+}
+
+@media (max-width: 550px){
+    .login-form{
+        width: 250px;
+    }
+}
