@@ -4,13 +4,18 @@
             <img src="assets/img/avatar-login.svg" alt="avatar-login">
         </div>
         <h5>Inicio de sesión</h5>
-        <div class="login">
-            <i class="far fa-user"></i>
-            <input type="text" placeholder="Username">
-        </div>
-        <div class="login">
-            <i class="far fa-lock-alt"></i>
-            <input type="password" placeholder="Password">
-        </div>
+        <div style="text-align: center;" *ngIf="error">{{error}}</div>
+        <form (submit)='signIn()'>
+            <div class="login">
+                <i class="far fa-user"></i>
+                <input [(ngModel)]="user.username" type="text" name="username" placeholder="Username">
+            </div>
+            <div class="login">
+                <i class="far fa-lock-alt"></i>
+                <input  [(ngModel)]="user.password" type="password" name="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn">Registrarse</button>
+        </form>
+        <a routerLink="home" routerLinkActive="active" >¿Olvido tu contraseña?</a>
     </div>
 </div>

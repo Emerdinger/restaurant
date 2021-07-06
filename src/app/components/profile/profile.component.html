@@ -1,0 +1,63 @@
+<div class="bg-perfil">
+    <div class="tarjeta">
+        <div class="card-profile">
+            <div class="card-img">
+                <img src="assets/img/profile-pic.svg" alt="profile-pic">
+            </div>
+            <h4>{{user.username}}</h4>
+            <p>
+                Bienvenido username, aquí encontraras toda tu información correspondiente a nuestra plataforma.
+            </p>
+        </div>
+        <div class="card-info">
+            <p>Puede editar su información ingresando los datos y luego dando al botón Editar</p>
+            <div style="text-align: center;" *ngIf="error">{{error}}</div>
+            <div class="card-grid">
+                <div>
+                    <i class="fal fa-envelope-square fa-lg"></i>
+                    <p>{{user.email}}</p>
+                </div>
+                <div>
+                    <i class="fas fa-signature fa-lg"></i>
+                    <input [(ngModel)]="user.name" type="text" value="{{user.name}}" placeholder="Nombre">
+                </div>
+                <div>
+                    <i class="fas fa-signature fa-lg"></i>
+                    <input [(ngModel)]="user.lastname" type="text" value="{{user.lastname}}"  placeholder="Apellido">
+                </div>
+                <div>
+                    <i class="far fa-mobile fa-lg"></i>
+                    <input [(ngModel)]="user.cellphone" type="number" value="{{user.cellphone}}"  placeholder="Teléfono">
+                </div>
+                <div>
+                    <i class="far fa-map-marker-alt fa-lg"></i>
+                    <input [(ngModel)]="user.address" type="text" value="{{user.address}}"  placeholder="Dirección">
+                </div>
+                <div>
+                    <i class="fal fa-city fa-lg"></i>
+                    <input [(ngModel)]="user.city" type="text" value="{{user.city}}" placeholder="Ciudad">
+                </div>
+            </div>
+            <a (click) = "editarInfo()" class="btn btn-outline-dark mt-3">Editar información</a>
+        </div>
+        <div class="card-historial">
+            <h5>Historial de pedidos</h5>
+            <div class="pedido">
+
+            </div>
+        </div>
+        <div class="card-actions">
+            <div>
+                <a class="btn btn-success">Cambiar contraseña</a>
+            </div>
+            <div>
+                <a class="btn btn-danger">Eliminar cuenta</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    Swal.fire('Oops...', 'Something went wrong!', 'error')
+    console.log('working')
+</script>

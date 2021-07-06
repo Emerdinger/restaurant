@@ -8,6 +8,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { SigninComponent } from "./components/signin/signin.component";
 import { SignupComponent } from "./components/signup/signup.component";
 import { MenuComponent } from "./components/menu/menu.component";
+import { ProfileComponent } from "./components/profile/profile.component";
 
 const routes: Routes = [
   {
@@ -30,6 +31,11 @@ const routes: Routes = [
   {
     path: 'menu',
     component: MenuComponent
+  },
+  {
+    path: 'perfil',
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

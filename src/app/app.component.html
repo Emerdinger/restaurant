@@ -7,9 +7,15 @@
     <div class="navbar">
         <ul>
             <li><a routerLink="inicio" routerLinkActive="active">Inicio</a></li>
-            <li><a routerLink="menu" routerLinkActive="active">Menu</a></li>
-            <li><a routerLink="registro" routerLinkActive="active">Registro</a></li>
-            <li><a routerLink="login" routerLinkActive="active">Login</a></li>
+            <li><a routerLink="menu" routerLinkActive="active">Menú</a></li>
+            <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
+                <li><a routerLink="registro" routerLinkActive="active">Registro</a></li>
+                <li><a routerLink="login" routerLinkActive="active">Login</a></li>
+            </ng-container>
+            <ng-template #loggedIn>
+                <li><a routerLink="perfil" routerLinkActive="active">Perfil</a></li>
+                <li><a (click)="authService.logOut()" style="cursor: pointer;">Salir</a></li>
+            </ng-template>
         </ul>
     </div>
 </div>

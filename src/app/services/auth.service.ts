@@ -7,12 +7,24 @@ import { Router } from "@angular/router";
 })
 export class AuthService {
 
-  private URL = 'http://localhost:5000/users'
+  private URL = 'https://restaurantapiemer.herokuapp.com/users'
 
   constructor(private http: HttpClient, private router: Router) { }
 
   signUp(user: {}){
-    return this.http.post<any>(this.URL + '/register', user)
+    return this.http.post<any>(this.URL + '/registro', user)
+  }
+
+  signIn(user: {}){
+    return this.http.post<any>(this.URL + '/login', user);
+  }
+
+  getProfile(){
+    return this.http.get<any>(this.URL + '/mydata');
+  }
+
+  editProfile(user: {}){
+    return this.http.post<any>(this.URL + '/editar/usuario', user);
   }
 
   loggedIn(){
@@ -29,7 +41,7 @@ export class AuthService {
 
   logOut(){
     localStorage.removeItem('token');
-    this.router.navigate(['/signin']);
+    this.router.navigate(['/login']);
   }
 
 }

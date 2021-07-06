@@ -11,6 +11,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { HomeComponent } from './components/home/home.component';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { MenuComponent } from './components/menu/menu.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { EditInfoComponent } from './components/edit-info/edit-info.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MenuComponent } from './components/menu/menu.component';
     SigninComponent,
     SignupComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    ProfileComponent,
+    EditInfoComponent
   ],
   imports: [
     BrowserModule,
