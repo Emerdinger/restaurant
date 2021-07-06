@@ -8,6 +8,7 @@ input[type=number]::-webkit-outer-spin-button {
     background: url(../../../assets/img/perfil-bg.jpg) center center/cover;
     background-attachment: fixed;
     overflow-y: scroll;
+    position: relative;
 }
 
 .tarjeta{
@@ -52,6 +53,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 .card-info .card-grid div{
     padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-info .card-grid div input {
@@ -70,7 +74,6 @@ input[type=number]::-webkit-outer-spin-button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2px;
-    margin-bottom: 15px;
 }
 
 .card-historial {
@@ -79,4 +82,66 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 15px;
     padding: 20px;
     margin-bottom: 15px;
+}
+
+.space{
+    width: 40%;
+    height: 20vh;
+    margin-top: 100px;
+}
+
+@media (max-width: 1250px){
+    .card-info .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px){
+    .card-profile {
+        width: 60%;
+    }
+
+    .card-info{
+        width: 60%;
+    }
+
+    .card-historial{
+        width: 60%;
+    }
+
+    .card-actions{
+        width: 60%;
+    }
+}
+
+@media (max-width: 750px){
+    .card-profile {
+        width: 80%;
+    }
+
+    .card-info{
+        width: 80%;
+    }
+
+    .card-historial{
+        width: 80%;
+    }
+
+    .card-actions{
+        width: 80%;
+    }
+}
+
+@media (max-width: 475px){
+    .card-info .card-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-actions {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-info .card-grid div input {
+        width: 80%;
+    }
 }
