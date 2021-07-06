@@ -5,7 +5,7 @@
 }
 
 .wave{
-    background: url(/assets/img/wave.png) no-repeat center;
+    background: url("../../../assets/img/wave.png") no-repeat center;
     width: 100%;
 }
 
