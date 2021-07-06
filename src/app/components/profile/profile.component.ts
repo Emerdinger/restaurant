@@ -32,6 +32,11 @@ export class ProfileComponent implements OnInit {
         } else {
           this.user = res.user
         }
+      },
+      error => {
+        if (error){
+          this.authService.logOut();
+        }
       }
     )
   }
