@@ -9,6 +9,7 @@ import { SigninComponent } from "./components/signin/signin.component";
 import { SignupComponent } from "./components/signup/signup.component";
 import { MenuComponent } from "./components/menu/menu.component";
 import { ProfileComponent } from "./components/profile/profile.component";
+import { RecoverpwComponent } from "./components/recoverpw/recoverpw.component";
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
     path: 'perfil',
     component: ProfileComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'recuperar/contraseña',
+    component: RecoverpwComponent
   }
 ];
 

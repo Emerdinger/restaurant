@@ -27,6 +27,18 @@ export class AuthService {
     return this.http.post<any>(this.URL + '/editar/usuario', user);
   }
 
+  getCodigo(user: {}){
+    return this.http.post<any>(this.URL + '/cambiar/password/email', user);
+  }
+
+  sendCodigo(user: {}){
+    return this.http.post<any>(this.URL + '/cambiar/password/verificarCodigo', user);
+  }
+
+  restablecerPw(user: {}){
+    return this.http.post<any>(this.URL + '/restablecer/password', user);
+  }
+
   loggedIn(){
     if (localStorage.getItem('token')){
       return true;

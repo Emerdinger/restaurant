@@ -1,0 +1,77 @@
+@import url('https://fonts.cdnfonts.com/css/flow-ext');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Flow Ext', sans-serif;
+}
+
+.recover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url("../../../assets/img/wave.png") no-repeat center;
+}
+
+.contenedor {
+    width: 375px;
+    border-radius: 7px;
+    text-align: center;
+    padding: 30px 35px;
+    border: 1px solid #000;
+}
+
+.contenedor header{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.contenedor .form-principal{
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-principal form {
+    display: flex;
+    width: 300%;
+}
+
+.form-principal form .pagina {
+    width: 33%;
+    transition: all .5s ease;
+}
+
+.form-principal form .pagina .titulo{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+}
+
+.form-principal form .pagina .campo {
+    height: 35px;
+    width: 100%;
+    margin: 40px 0;
+}
+
+.form-principal form .pagina .campo input{
+    width: 80%;
+    height: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+.form-principal form .pagina .campo button{
+    height: calc(100% + 5px);
+    margin-top: 20px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3 ease;
+}

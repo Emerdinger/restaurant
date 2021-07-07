@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditInfoComponent } from './edit-info.component';
+import { RecoverpwComponent } from './recoverpw.component';
 
-describe('EditInfoComponent', () => {
-  let component: EditInfoComponent;
-  let fixture: ComponentFixture<EditInfoComponent>;
+describe('RecoverpwComponent', () => {
+  let component: RecoverpwComponent;
+  let fixture: ComponentFixture<RecoverpwComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditInfoComponent ]
+      declarations: [ RecoverpwComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditInfoComponent);
+    fixture = TestBed.createComponent(RecoverpwComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

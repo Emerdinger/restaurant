@@ -1,0 +1,63 @@
+<div class="recover">
+    <div class="contenedor">
+        <header>Recuperar contraseña</header>
+
+        <div class="form-principal">
+            <form action="#">
+                <div class="pagina movPag">
+                    <div class="titulo">
+                        Ingrese su email
+                    </div>
+                    <div class="error">
+                        {{error}}
+                    </div>
+                    <div class="campo">
+                        <div class="label">Email:</div>
+                        <input [(ngModel)]="user.email" type="email" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="campo sigPag2">
+                        <button (click)="enviarEmail()" class="btn btn-outline-dark">Enviar código</button>
+                    </div>
+                </div>
+
+                <!-- CODIGO -->
+                <div class="pagina">
+                    <div class="titulo">
+                        Ingrese el código de verificación
+                    </div>
+                    <div class="error">
+                        {{error}}
+                    </div>
+                    <div class="campo">
+                        <input [(ngModel)]="user.token" type="text" id="token" name="token" placeholder="Código de 6 dígitos">
+                    </div>
+                    <div class="campo sigPag3">
+                        <button (click)="enviarCodigo()" class="btn btn-outline-dark">Confirmar</button>
+                    </div>
+                </div>
+
+                <!-- Cambiar contraseña -->
+                <div class="pagina">
+                    <div class="titulo">
+                        Ingrese su nueva contraseña
+                    </div>
+                    <div class="error">
+                        {{error}}
+                    </div>
+                    <div class="campo">
+                        <div class="label">Contraseña:</div>
+                        <input [(ngModel)]="user.password" type="password" id="password" name="password" placeholder="Contraseña">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Confirmar Contraseña:</div>
+                        <input [(ngModel)]="user.confirmPassword" type="password" id="confirmPassword" name="confirmPassword"
+                            placeholder="Confirmar Contraseña">
+                    </div>
+                    <div class="campo">
+                        <button (click)="cambiarPw()" class="btn btn-outline-dark">Cambiar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -12,7 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { MenuComponent } from './components/menu/menu.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { EditInfoComponent } from './components/edit-info/edit-info.component';
+import { RecoverpwComponent } from './components/recoverpw/recoverpw.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { EditInfoComponent } from './components/edit-info/edit-info.component';
     HomeComponent,
     MenuComponent,
     ProfileComponent,
-    EditInfoComponent
+    RecoverpwComponent
   ],
   imports: [
     BrowserModule,

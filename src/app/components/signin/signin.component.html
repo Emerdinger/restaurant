@@ -14,8 +14,9 @@
                 <i class="far fa-lock-alt"></i>
                 <input  [(ngModel)]="user.password" type="password" name="password" placeholder="Password">
             </div>
-            <button type="submit" class="btn">Registrarse</button>
+            <button type="submit" class="btn">Iniciar</button>
         </form>
-        <a routerLink="home" routerLinkActive="active" >¿Olvido tu contraseña?</a>
+        <a routerLink="/recuperar/contraseña" routerLinkActive="active" >¿Olvido su contraseña?</a>
+        <a routerLink="/registro" routerLinkActive="active" >¿Aún no tiene una cuenta?</a>
     </div>
 </div>
