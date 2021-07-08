@@ -1,4 +1,35 @@
 <div class="bg-perfil">
+    <div class="modal">
+        <div class="modal-border">
+            <div class="modal-main">
+                <i (click)="cerrarModal()" class='bx bx-x'></i>
+                <form>
+                    <div class="modal-form mover-form">
+                        <div class="codigo">
+                            <h4>Ingrese el código</h4>
+                            <p>Hemos enviado a su correo un código de verificación</p>
+                            <div>
+                                {{errorPw}}
+                            </div> <br>
+                            <input [(ngModel)]="cambioPw.token" name="token" type="text" placeholder="Ingrese el código"><br>
+                            <button (click)="enviarCode()" class="btn btn-outline-dark code">Enviar</button>
+                        </div>
+                    </div>
+                    <div class="modal-form">
+                        <div class="codigo">
+                            <h4>Nueva contraseña</h4>
+                            <div>
+                                {{errorPw}}
+                            </div> <br>
+                            <input [(ngModel)]="cambioPw.password" name="password" type="password" placeholder="Contraseña"><br>
+                            <input [(ngModel)]="cambioPw.confirmPassword" name="confirmPassword" type="password" placeholder="Confirmar contraseña"><br>
+                            <button (click)="cambiarPw()" class="btn btn-outline-dark code">Cambiar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <div class="tarjeta">
         <div class="card-profile">
             <div class="card-img">
@@ -48,7 +79,7 @@
         </div>
         <div class="card-actions">
             <div>
-                <a class="btn btn-success mb-3">Cambiar contraseña</a>
+                <a id="open" (click)="abrirModal()" class="btn btn-success mb-3">Cambiar contraseña</a>
             </div>
             <div>
                 <a class="btn btn-danger">Eliminar cuenta</a>

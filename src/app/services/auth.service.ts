@@ -39,6 +39,18 @@ export class AuthService {
     return this.http.post<any>(this.URL + '/restablecer/password', user);
   }
 
+  enviarCodigoUser(){
+    return this.http.get<any>(this.URL + '/cambiar/password/user');
+  }
+
+  verificarCodigoUser(token:{}){
+    return this.http.post<any>(this.URL + '/cambiar/password/verificarCodigo/user', token);
+  }
+
+  cambiarPasswordUser(user: {}){
+    return this.http.post<any>(this.URL + '/cambiar/password', user);
+  }
+
   loggedIn(){
     if (localStorage.getItem('token')){
       return true;

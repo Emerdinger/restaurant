@@ -90,6 +90,90 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 100px;
 }
 
+/* Modal cambiar pw */
+.modal{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: -200%;
+    background-color: rgba(109, 109, 109, 0.3);
+    z-index: 1000;
+    transition: 1s ease-in-out;
+}
+
+.modal.active{
+    margin-top: 0;
+    transition: all 1s ease;
+}
+
+.modal .modal-border{
+    width: 350px;
+    padding: 28px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background: #fff;
+    margin-top: -200%;
+    transition: all .5s ease;
+}
+
+.modal .modal-border.active{
+    margin-top: 0;
+    transition: all .5s ease;
+}
+
+.modal .bx-x {
+    font-size: 30px;
+    position: relative;
+    top: -8px;
+    right: -45%;
+}
+
+.modal .modal-border .modal-main {
+    width: 100%;
+    overflow: hidden;
+}
+
+.modal .modal-border .modal-main form{
+    display: flex;
+    width: 200%;
+}
+
+.modal .modal-form {
+    width: 50%;
+    transition: all .5s ease;
+}
+
+.modal .modal-form h4{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.modal .modal-form .codigo p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.modal .modal-form .codigo input{
+    width: 50%;
+    text-align: center;
+    height: 28px;
+    margin-bottom: 18px;
+    border: .2px solid #000;
+    border-radius: 5px;
+}
+
+.modal .modal-form button{
+    padding: 10px 20px;
+    margin-bottom: 18px;
+    transition: .3s ease;
+}
+
 @media (max-width: 1250px){
     .card-info .card-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -143,5 +227,11 @@ input[type=number]::-webkit-outer-spin-button {
 
     .card-info .card-grid div input {
         width: 80%;
+    }
+}
+
+@media (max-width: 375px) {
+    .modal .modal-border{
+        width: 275px;
     }
 }
